@@ -1,0 +1,27 @@
+﻿Databases: ['digitalpds', 'information_schema', 'mysql', 'performance_schema', 'phpmyadmin', 'test']
+Tables in digitalpds: ['admins', 'appointments', 'brushing_checkins', 'clinics', 'dealer_locations', 'dealer_stock', 'dealers', 'family_members', 'kit_distributions', 'member_monthly_usage', 'stock_requests', 'teeth_reports', 'users']
+
+Columns in 'users' table:
+('id', 'int(11)', 'NO', 'PRI', None, 'auto_increment')
+('name', 'varchar(100)', 'NO', '', None, '')
+('email', 'varchar(120)', 'NO', 'UNI', None, '')
+('phone', 'varchar(20)', 'YES', '', None, '')
+('password_hash', 'varchar(255)', 'NO', '', None, '')
+('pds_card_no', 'varchar(50)', 'YES', '', None, '')
+('pds_linked_at', 'datetime', 'YES', '', None, '')
+('pds_verified', 'tinyint(1)', 'YES', '', '0', '')
+('reset_code', 'varchar(255)', 'YES', '', None, '')
+('reset_expiry', 'datetime', 'YES', '', None, '')
+('dealer_id', 'int(11)', 'YES', '', None, '')
+('location_id', 'int(11)', 'YES', 'MUL', None, '')
+('created_by_type', 'varchar(20)', 'YES', '', 'SELF', '')
+('dealer_assigned_at', 'datetime', 'YES', '', None, '')
+('dealer_assignment_locked', 'tinyint(1)', 'YES', '', '0', '')
+('pds_card_front', 'varchar(255)', 'YES', '', None, '')
+('pds_card_back', 'varchar(255)', 'YES', '', None, '')
+('address', 'text', 'YES', '', None, '')
+('age', 'int(11)', 'YES', '', None, '')
+('gender', 'varchar(20)', 'YES', '', None, '')
+('education', 'varchar(100)', 'YES', '', None, '')
+('employment', 'varchar(100)', 'YES', '', None, '')
+('profile_image', 'varchar(255)', 'YES', '', None, '')

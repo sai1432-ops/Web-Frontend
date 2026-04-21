@@ -1,0 +1,12 @@
+--- users ---
+id, name, email, phone, password_hash, pds_card_no, pds_linked_at, pds_verified, reset_code, reset_expiry, dealer_id, location_id, created_by_type, dealer_assigned_at, dealer_assignment_locked, pds_card_front, pds_card_back, address, age, gender, education, employment, profile_image, created_at, email_verified, email_verification_otp, email_verification_expiry
+
+--- family_members ---
+id, user_id, member_name, age, brushing_target, weekly_brush_count, relation
+
+--- brushing_checkins ---
+id, user_id, member_id, checkin_date, session, created_at
+
+--- kit_distributions ---
+id, beneficiary_id, dealer_id, kit_unique_id, status, expiry, confirmed_at, created_at, confirmation_mode, old_kit_returned, paste_received, iec_received, brush_received
+

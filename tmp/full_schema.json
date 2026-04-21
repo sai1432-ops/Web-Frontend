@@ -1,0 +1,210 @@
+{
+  "teeth_reports": [
+    {
+      "name": "id",
+      "type": "INTEGER"
+    },
+    {
+      "name": "user_id",
+      "type": "INTEGER"
+    },
+    {
+      "name": "member_id",
+      "type": "INTEGER"
+    },
+    {
+      "name": "image_path",
+      "type": "TEXT"
+    },
+    {
+      "name": "ai_result",
+      "type": "TEXT"
+    },
+    {
+      "name": "risk_level",
+      "type": "ENUM"
+    },
+    {
+      "name": "created_at",
+      "type": "TIMESTAMP"
+    }
+  ],
+  "member_monthly_usage": [
+    {
+      "name": "id",
+      "type": "INTEGER"
+    },
+    {
+      "name": "user_id",
+      "type": "INTEGER"
+    },
+    {
+      "name": "member_id",
+      "type": "INTEGER"
+    },
+    {
+      "name": "month_year",
+      "type": "VARCHAR(7)"
+    },
+    {
+      "name": "paste_consumption",
+      "type": "VARCHAR(30)"
+    },
+    {
+      "name": "brush_condition",
+      "type": "VARCHAR(30)"
+    },
+    {
+      "name": "remarks",
+      "type": "TEXT"
+    },
+    {
+      "name": "created_at",
+      "type": "DATETIME"
+    },
+    {
+      "name": "updated_at",
+      "type": "DATETIME"
+    }
+  ],
+  "appointments": [
+    {
+      "name": "id",
+      "type": "INTEGER"
+    },
+    {
+      "name": "user_id",
+      "type": "INTEGER"
+    },
+    {
+      "name": "clinic_id",
+      "type": "INTEGER"
+    },
+    {
+      "name": "appointment_date",
+      "type": "DATE"
+    },
+    {
+      "name": "time_slot",
+      "type": "VARCHAR(50)"
+    },
+    {
+      "name": "status",
+      "type": "ENUM"
+    },
+    {
+      "name": "created_at",
+      "type": "TIMESTAMP"
+    }
+  ],
+  "kit_distributions": [
+    {
+      "name": "id",
+      "type": "INTEGER"
+    },
+    {
+      "name": "beneficiary_id",
+      "type": "INTEGER"
+    },
+    {
+      "name": "dealer_id",
+      "type": "INTEGER"
+    },
+    {
+      "name": "kit_unique_id",
+      "type": "VARCHAR(100)"
+    },
+    {
+      "name": "status",
+      "type": "ENUM"
+    },
+    {
+      "name": "expiry",
+      "type": "DATETIME"
+    },
+    {
+      "name": "confirmed_at",
+      "type": "DATETIME"
+    },
+    {
+      "name": "created_at",
+      "type": "TIMESTAMP"
+    },
+    {
+      "name": "confirmation_mode",
+      "type": "VARCHAR(50)"
+    },
+    {
+      "name": "old_kit_returned",
+      "type": "TINYINT"
+    },
+    {
+      "name": "paste_received",
+      "type": "INTEGER"
+    },
+    {
+      "name": "iec_received",
+      "type": "INTEGER"
+    },
+    {
+      "name": "brush_received",
+      "type": "INTEGER"
+    }
+  ],
+  "family_members": [
+    {
+      "name": "id",
+      "type": "INTEGER"
+    },
+    {
+      "name": "user_id",
+      "type": "INTEGER"
+    },
+    {
+      "name": "member_name",
+      "type": "VARCHAR(100)"
+    },
+    {
+      "name": "age",
+      "type": "INTEGER"
+    },
+    {
+      "name": "brushing_target",
+      "type": "INTEGER"
+    },
+    {
+      "name": "weekly_brush_count",
+      "type": "INTEGER"
+    },
+    {
+      "name": "relation",
+      "type": "VARCHAR(50)"
+    }
+  ],
+  "brushing_checkins": [
+    {
+      "name": "id",
+      "type": "INTEGER"
+    },
+    {
+      "name": "user_id",
+      "type": "INTEGER"
+    },
+    {
+      "name": "member_id",
+      "type": "INTEGER"
+    },
+    {
+      "name": "checkin_date",
+      "type": "DATE"
+    },
+    {
+      "name": "session",
+      "type": "ENUM"
+    },
+    {
+      "name": "created_at",
+      "type": "TIMESTAMP"
+    }
+  ]
+}

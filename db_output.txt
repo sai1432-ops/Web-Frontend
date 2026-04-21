@@ -1,0 +1,3 @@
+Table: teeth_reports
+Columns: ["id", "user_id", "member_id", "image_path", "ai_result", "risk_level", "created_at"]
+Sample Row: [5, 12, None, 'C:\\xampp\\htdocs\\pdssystem\\uploads\\1fefe1b3-7f3e-4b0f-a00a-a03dec513591_temp_image_1772780441921.jpg', "[{'class_name': 'Caries', 'confidence': 0.5467813014984131, 'box': [288.2505798339844, 118.38902282714844, 375.2183532714844, 232.5498809814453]}, {'class_name': 'Caries', 'confidence': 0.48453405499458313, 'box': [402.333984375, 151.29173278808594, 471.7346496582031, 236.64871215820312]}]", 'MEDIUM', datetime.datetime(2026, 3, 6, 12, 30, 41)]

@@ -1,0 +1,22 @@
+400 POST /api/user/register -> JSON | {
+  "error": "email is required"
+}
+
+400 POST /user/register -> JSON | {
+  "error": "email is required"
+}
+
+404 POST /api/user/select-dealer -> JSON | {
+  "error": "User or Dealer not found"
+}
+
+404 POST /user/select-dealer -> HTML | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<
+404 POST /user/select-dealer -> HTML | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<

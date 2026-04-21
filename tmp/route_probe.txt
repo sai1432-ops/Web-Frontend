@@ -1,0 +1,8 @@
+POST /user/profile-image/1 -> 404 (NOT EXIST)
+POST /api/user/profile-image/1 -> 404 (NOT EXIST)
+POST /user/profile-photo/1 -> 404 (NOT EXIST)
+POST /api/user/profile-photo/1 -> 404 (NOT EXIST)
+POST /user/upload-image/1 -> 404 (NOT EXIST)
+POST /api/user/upload-image/1 -> 404 (NOT EXIST)
+PUT /user/profile-image/1 -> 404 (NOT EXIST)
+PUT /api/user/profile-image/1 -> 404 (NOT EXIST)

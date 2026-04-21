@@ -1,0 +1,8 @@
+﻿--- Endpoint Discovery ---
+[FOUND] POST /user/forgot-password -> Status: 400
+[FOUND] PUT /user/forgot-password -> Status: 405
+[FOUND] POST /dealer/forgot-password -> Status: 400
+[FOUND] PUT /dealer/forgot-password -> Status: 405
+[FOUND] POST /user/change-password -> Status: 405
+[FOUND] PUT /user/change-password -> Status: 401
+--- Discovery Complete ---

@@ -1,0 +1,38 @@
+400 POST /user/link-identity (data keys: ['user_id', 'pds_card_no']) -> JSON | {
+  "error": "userId and identityCardNo are required"
+}
+
+404 POST /user/link-identity (data keys: ['userId', 'identityCardNo']) -> JSON | {
+  "error": "User not found"
+}
+
+404 POST /api/user/link-identity (data keys: ['user_id', 'pds_card_no']) -> HTML | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+404 POST /api/user/link-identity (data keys: ['userId', 'identityCardNo']) -> HTML | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+404 POST /user/link-pds (data keys: ['user_id', 'pds_card_no']) -> HTML | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+404 POST /user/link-pds-card (data keys: ['user_id', 'pds_card_no']) -> HTML | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+404 POST /user/verify-identity (data keys: ['user_id', 'pds_card_no']) -> HTML | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 
+404 POST /user/link-card (data keys: ['user_id', 'pds_card_no']) -> HTML | <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL 

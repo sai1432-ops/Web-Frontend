@@ -1,0 +1,33 @@
+400 POST /user/confirm-kit -> JSON=True | {
+  "error": "kit_unique_id is required"
+}
+
+404 POST /user/confirm-kit-receipt -> JSON=False | <!doctype html>
+<html lang=en>
+<title>404 Not Foun
+404 POST /user/confirm-kit-distribution -> JSON=False | <!doctype html>
+<html lang=en>
+<title>404 Not Foun
+404 POST /user/confirm_kit_receipt -> JSON=False | <!doctype html>
+<html lang=en>
+<title>404 Not Foun
+404 POST /user/kit-confirm -> JSON=False | <!doctype html>
+<html lang=en>
+<title>404 Not Foun
+404 POST /user/confirm-distribution -> JSON=False | <!doctype html>
+<html lang=en>
+<title>404 Not Foun
+404 POST /user/confirm -> JSON=False | <!doctype html>
+<html lang=en>
+<title>404 Not Foun
+404 POST /user/receipt-confirm -> JSON=False | <!doctype html>
+<html lang=en>
+<title>404 Not Foun
+404 POST /user/kit/confirm -> JSON=False | <!doctype html>
+<html lang=en>
+<title>404 Not Foun
+400 POST /user/confirm-kit-by-dealer-qr -> JSON=True | {
+  "error": "dealer_qr_value and beneficiary_id r
+404 POST /api/user/confirm-kit-receipt -> JSON=False | <!doctype html>
+<html lang=en>
+<title>404 Not Foun

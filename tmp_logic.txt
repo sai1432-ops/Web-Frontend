@@ -1,0 +1,100 @@
+﻿@app.route("/user/verify-email-otp", methods=["POST"])
+def user_verify_email_otp():
+    try:
+        data = get_request_data()
+        email = data.get("email", "").strip().lower()
+        otp = data.get("otp", "").strip()
+
+        if not email or not otp:
+            return jsonify({"error": "email and otp are required"}), 400
+
+        user = User.query.filter_by(email=email).first()
+        if not user:
+            return jsonify({"error": "Invalid target account"}), 400
+
+        if user.email_verified:
+            return jsonify({"message": "Email already verified"}), 200
+
+        if user.email_verification_otp != otp:
+            return jsonify({"error": "Invalid OTP"}), 400
+
+        if not user.email_verification_expiry or datetime.utcnow() > user.email_verification_expiry:
+            return jsonify({"error": "OTP expired"}), 400
+
+        user.email_verified = True
+        user.email_verification_otp = None
+        user.email_verification_expiry = None
+        db.session.commit()
+
+        return jsonify({"message": "User email verified successfully"}), 200
+
+    except Exception as e:
+        db.session.rollback()
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route("/dealer/verify-email-otp", methods=["POST"])
+def dealer_verify_email_otp():
+    try:
+        data = get_request_data()
+        email = data.get("email", "").strip().lower()
+        otp = data.get("otp", "").strip()
+
+        if not email or not otp:
+            return jsonify({"error": "email and otp are required"}), 400
+
+        dealer = Dealer.query.filter_by(email=email).first()
+        if not dealer:
+            return jsonify({"error": "Invalid target account"}), 400
+
+        if dealer.email_verified:
+            return jsonify({"message": "Email already verified"}), 200
+
+        if dealer.email_verification_otp != otp:
+            return jsonify({"error": "Invalid OTP"}), 400
+
+        if not dealer.email_verification_expiry or datetime.utcnow() > dealer.email_verification_expiry:
+            return jsonify({"error": "OTP expired"}), 400
+
+        dealer.email_verified = True
+        dealer.email_verification_otp = None
+        dealer.email_verification_expiry = None
+        db.session.commit()
+
+        return jsonify({"message": "Dealer email verified successfully"}), 200
+
+    except Exception as e:
+        db.session.rollback()
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route("/user/resend-email-otp", methods=["POST"])
+def user_resend_email_otp():
+    try:
+        data = get_request_data()
+        email = data.get("email", "").strip().lower()
+
+        if not email:
+            return jsonify({"error": "email is required"}), 400
+
+        user = User.query.filter_by(email=email).first()
+        if not user:
+            return jsonify({"message": "If the account exists, OTP has been sent"}), 200
+
+        if user.email_verified:
+            return jsonify({"message": "Email already verified"}), 200
+
+        otp = generate_otp()
+        user.email_verification_otp = otp
+        user.email_verification_expiry = datetime.utcnow() + timedelta(minutes=10)
+        db.session.commit()
+
+        send_email_verification_otp(user.email, user.name, otp, role="User")
+        return jsonify({"message": "OTP sent successfully"}), 200
+
+    except Exception as e:
+        db.session.rollback()
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route("/dealer/resend-email-otp", methods=["POST"])

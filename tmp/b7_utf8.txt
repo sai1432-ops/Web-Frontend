@@ -1,0 +1,65 @@
+﻿{
+  "address": "poonamalle ",
+  "age": 35,
+  "category": "PHH",
+  "createdAt": "2026-04-02",
+  "createdById": "9",
+  "createdByName": "Sai",
+  "createdByRole": "SELF",
+  "education": "High School",
+  "email": "chinna@gmail.com",
+  "employment": "Employed",
+  "familyMembers": [
+    {
+      "age": 14,
+      "brushing_target": 14,
+      "id": 13,
+      "member_name": "prakash",
+      "relation": "son",
+      "user_id": 7,
+      "weekly_brush_count": 0
+    },
+    {
+      "age": 13,
+      "brushing_target": 14,
+      "id": 14,
+      "member_name": "rakesh ",
+      "relation": "son",
+      "user_id": 7,
+      "weekly_brush_count": 0
+    },
+    {
+      "age": 1,
+      "brushing_target": 14,
+      "id": 16,
+      "member_name": "shiva",
+      "relation": "son",
+      "user_id": 7,
+      "weekly_brush_count": 0
+    }
+  ],
+  "gender": "Male",
+  "history": [
+    {
+      "beneficiaryId": 7,
+      "date": "2026-04-03",
+      "givenBy": "Sai",
+      "id": "997d6a55-57d0-41d8-8bf9-b7abb4ede368",
+      "kitName": "Standard Dental Kit",
+      "kitType": "Monthly Issue",
+      "notes": "Confirmation Mode: USER_QR_SCAN",
+      "quantity": "Brush: 4, Paste: 4",
+      "status": "GIVEN"
+    }
+  ],
+  "household_id": "HH-7",
+  "id": 7,
+  "location": "GRT jwellery, Poonamallee ",
+  "name": "chinna",
+  "pds_card_back": null,
+  "pds_card_front": null,
+  "pds_card_no": "PDS-673963",
+  "phone": "9876543120",
+  "profile_image": "uploads/profile_pictures/user_7_da1cc228_profile_upload_1775154284242.jpg",
+  "status": "GIVEN"
+}

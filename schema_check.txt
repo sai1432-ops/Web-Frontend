@@ -1,0 +1,6 @@
+('id', 'int(11)', 'NO', 'PRI', None, 'auto_increment')
+('user_id', 'int(11)', 'NO', 'MUL', None, '')
+('member_id', 'int(11)', 'YES', '', None, '')
+('checkin_date', 'date', 'NO', '', None, '')
+('session', "enum('MORNING','EVENING')", 'YES', '', 'MORNING', '')
+('created_at', 'timestamp', 'NO', '', 'current_timestamp()', '')

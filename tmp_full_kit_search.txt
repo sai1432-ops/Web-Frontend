@@ -1,0 +1,518 @@
+﻿FILE: db_schema_output.txt
+--- users ---
+id, name, email, phone, password_hash, pds_card_no, pds_linked_at, pds_verified, reset_code, reset_expiry, dealer_id, location_id, created_by_type, dealer_assigned_at, dealer_assignment_locked, pds_card_front, pds_card_back, address, age, gender, education, employment, profile_image, created_at, email_verified, email_verification_otp, email_verification_expiry
+
+--- family_members ---
+id, user_id, member_name, age, brushing_target, weekly_brush_count, relation
+
+--- brushing_checkins ---
+id, user_id, member_id, checkin_date, session, created_at
+
+--- kit_distributions ---
+id, beneficiary_id, dealer_id, kit_unique_id, status, expiry, confirmed_at, created_at, confirmation_mode, old_kit_returned, paste_received, iec_received, brush_received
+
+
+FILE: db_schema_utf8.txt
+∩╗┐Databases: ['digitalpds', 'information_schema', 'mysql', 'performance_schema', 'phpmyadmin', 'test']
+Tables in digitalpds: ['admins', 'appointments', 'brushing_checkins', 'clinics', 'dealer_locations', 'dealer_stock', 'dealers', 'family_members', 'kit_distributions', 'member_monthly_usage', 'stock_requests', 'teeth_reports', 'users']
+
+Columns in 'users' table:
+('id', 'int(11)', 'NO', 'PRI', None, 'auto_increment')
+('name', 'varchar(100)', 'NO', '', None, '')
+('email', 'varchar(120)', 'NO', 'UNI', None, '')
+('phone', 'varchar(20)', 'YES', '', None, '')
+('password_hash', 'varchar(255)', 'NO', '', None, '')
+('pds_card_no', 'varchar(50)', 'YES', '', None, '')
+('pds_linked_at', 'datetime', 'YES', '', None, '')
+('pds_verified', 'tinyint(1)', 'YES', '', '0', '')
+('reset_code', 'varchar(255)', 'YES', '', None, '')
+('reset_expiry', 'datetime', 'YES', '', None, '')
+('dealer_id', 'int(11)', 'YES', '', None, '')
+('location_id', 'int(11)', 'YES', 'MUL', None, '')
+('created_by_type', 'varchar(20)', 'YES', '', 'SELF', '')
+('dealer_assigned_at', 'datetime', 'YES', '', None, '')
+('dealer_assignment_locked', 'tinyint(1)', 'YES', '', '0', '')
+('pds_card_front', 'varchar(255)', 'YES', '', None, '')
+('pds_card_back', 'varchar(255)', 'YES', '', None, '')
+('address', 'text', 'YES', '', None, '')
+('age', 'int(11)', 'YES', '', None, '')
+('gender', 'varchar(20)', 'YES', '', None, '')
+('education', 'varchar(100)', 'YES', '', None, '')
+('employment', 'varchar(100)', 'YES', '', None, '')
+('profile_image', 'varchar(255)', 'YES', '', None, '')
+
+FILE: server_log_utf8.txt
+∩╗┐ * Serving Flask app 'app'
+ * Debug mode: on
+python : WARNING: This is a 
+development server. Do not 
+use it in a production 
+deployment. Use a 
+production WSGI server 
+instead.
+At line:1 char:1
++ python app.py > 
+server_log.txt 2>&1
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~
+    + CategoryInfo          
+:     NotSpecified: 
+(WARNING: Th    is 
+i...server instead.:Str    
+ing) [], RemoteException
+    + FullyQualifiedErrorId 
+:     NativeCommandError
+ 
+ * Running on all addresses 
+(0.0.0.0)
+ * Running on 
+http://127.0.0.1:5000
+ * Running on 
+http://10.226.38.33:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 124-744-339
+127.0.0.1 - - [03/Apr/2026 
+10:56:53] "GET 
+/admin/dashboard-stats 
+HTTP/1.1" 200 -
+Traceback (most recent call 
+last):
+  File "C:\Users\APPANAGIRI\
+OneDrive\Desktop\digitalpds-
+web\Digitalpds\app.py", 
+line 334, in 
+get_admin_dealers
+    "handle": d.handle,
+              ^^^^^^^^
+AttributeError: 'Dealer' 
+object has no attribute 
+'handle'
+127.0.0.1 - - [03/Apr/2026 
+10:56:55] "GET 
+/admin/dealers HTTP/1.1" 
+500 -
+Traceback (most recent call 
+last):
+  File "C:\Users\APPANAGIRI\
+OneDrive\Desktop\digitalpds-
+web\Digitalpds\app.py", 
+line 369, in 
+get_admin_beneficiaries
+    "pds_card_no": 
+u.identity_card_no,
+                   
+^^^^^^^^^^^^^^^^^^
+AttributeError: 'User' 
+object has no attribute 
+'identity_card_no'
+127.0.0.1 - - [03/Apr/2026 
+10:56:57] "GET 
+/admin/beneficiaries 
+HTTP/1.1" 500 -
+C:\Users\APPANAGIRI\OneDrive
+\Desktop\digitalpds-web\Digi
+talpds\app.py:389: 
+LegacyAPIWarning: The 
+Query.get() method is 
+considered legacy as of the 
+1.x series of SQLAlchemy 
+and becomes a legacy 
+construct in 2.0. The 
+method is now available as 
+Session.get() (deprecated 
+since: 2.0) (Background on 
+SQLAlchemy 2.0 at: 
+https://sqlalche.me/e/b8d9)
+  dealer = Dealer.query.get(
+d.dealer_id)
+127.0.0.1 - - [03/Apr/2026 
+10:56:59] "GET 
+/admin/distributions 
+HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 
+10:57:01] "GET 
+/dealer/dashboard-stats/1 
+HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 
+10:57:03] "GET /dealer/benef
+iciaries?dealerId=1 
+HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 
+10:57:21] "GET 
+/admin/dashboard-stats 
+HTTP/1.1" 200 -
+Traceback (most recent call 
+last):
+  File "C:\Users\APPANAGIRI\
+OneDrive\Desktop\digitalpds-
+web\Digitalpds\app.py", 
+line 334, in 
+get_admin_dealers
+    "handle": d.handle,
+              ^^^^^^^^
+AttributeError: 'Dealer' 
+object has no attribute 
+'handle'
+127.0.0.1 - - [03/Apr/2026 
+10:57:23] "GET 
+/admin/dealers HTTP/1.1" 
+500 -
+Traceback (most recent call 
+last):
+  File "C:\Users\APPANAGIRI\
+OneDrive\Desktop\digitalpds-
+web\Digitalpds\app.py", 
+line 369, in 
+get_admin_beneficiaries
+    "pds_card_no": 
+u.identity_card_no,
+                   
+^^^^^^^^^^^^^^^^^^
+AttributeError: 'User' 
+object has no attribute 
+'identity_card_no'
+127.0.0.1 - - [03/Apr/2026 
+10:57:25] "GET 
+/admin/beneficiaries 
+HTTP/1.1" 500 -
+127.0.0.1 - - [03/Apr/2026 
+10:57:27] "GET 
+/admin/distributions 
+HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 
+10:57:29] "GET 
+/dealer/dashboard-stats/1 
+HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 
+10:57:31] "GET /dealer/benef
+iciaries?dealerId=1 
+HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 
+10:58:40] "POST /user/login 
+HTTP/1.1" 401 -
+C:\Users\APPANAGIRI\AppData\
+Local\Programs\Python\Python
+312\Lib\site-packages\jwt\ap
+i_jwt.py:153: 
+InsecureKeyLengthWarning: 
+The HMAC key is 16 bytes 
+long, which is below the 
+minimum recommended length 
+of 32 bytes for SHA256. See 
+RFC 7518 Section 3.2.
+  return self._jws.encode(
+127.0.0.1 - - [03/Apr/2026 
+10:58:49] "POST /user/login 
+HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 
+10:59:09] "GET 
+/user/view-clinics 
+HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 
+10:59:13] "GET 
+/user/view-clinics 
+HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 
+10:59:17] "GET /user/distrib
+utions?userId=1 HTTP/1.1" 
+404 -
+127.0.0.1 - - [03/Apr/2026 
+10:59:25] "GET /user/distrib
+utions?userId=1 HTTP/1.1" 
+404 -
+ * Detected change in 'C:\\U
+sers\\APPANAGIRI\\OneDrive\\
+Desktop\\digitalpds-web\\Dig
+italpds\\app.py', reloading
+Exception in thread 
+Thread-1 (serve_forever):
+Traceback (most recent call 
+last):
+  File "C:\Users\APPANAGIRI\
+AppData\Local\Programs\Pytho
+n\Python312\Lib\threading.py
+", line 1073, in 
+_bootstrap_inner
+    self.run()
+  File "C:\Users\APPANAGIRI\
+AppData\Local\Programs\Pytho
+n\Python312\Lib\threading.py
+", line 1010, in run
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 124-744-339
+ * Detected change in 'C:\\U
+sers\\APPANAGIRI\\OneDrive\\
+Desktop\\digitalpds-web\\Dig
+italpds\\app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 124-744-339
+127.0.0.1 - - [03/Apr/2026 
+11:04:19] "GET 
+/user/dashboard HTTP/1.1" 
+404 -
+C:\Users\APPANAGIRI\AppData\
+Local\Programs\Python\Python
+312\Lib\site-packages\jwt\ap
+i_jwt.py:153: 
+InsecureKeyLengthWarning: 
+The HMAC key is 16 bytes 
+long, which is below the 
+minimum recommended length 
+of 32 bytes for SHA256. See 
+RFC 7518 Section 3.2.
+  return self._jws.encode(
+127.0.0.1 - - [03/Apr/2026 
+11:04:59] "POST /user/login 
+HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 
+11:08:00] "POST /user/login 
+HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 
+11:08:59] "GET 
+/user/dashboard HTTP/1.1" 
+404 -
+
+FILE: tmp_all_routes.txt
+∩╗┐/
+/admin/add-clinic
+/admin/approve-stock/<int:request_id>
+/admin/beneficiaries
+/admin/beneficiaries/<int:user_id>
+/admin/beneficiary/<int:user_id>
+/admin/change-password
+/admin/dashboard-stats
+/admin/dashboard-stats
+/admin/dealers
+/admin/dealers/<dealer_id>
+/admin/delete-beneficiary/<int:user_id>
+/admin/delete-clinic/<int:clinic_id>
+/admin/delete-dealer/<int:dealer_id>
+/admin/dispatch-stock/<int:request_id>
+/admin/distributions
+/admin/generate-missing-dealer-qrs
+/admin/get-dealers
+/admin/login
+/admin/profile
+/admin/regenerate-all-dealer-qrs
+/admin/reject-stock/<int:request_id>
+/admin/stock-requests
+/admin/stock-requests/<int:request_id>
+/admin/sync-existing-dealer-locations
+/admin/update-beneficiary/<int:user_id>
+/admin/update-profile
+/api/admin/beneficiaries
+/api/dealers
+/api/family-members
+/api/family-members/<int:member_id>
+/api/family-members/<int:member_id>
+/api/family-members/<int:user_id>
+/api/member/<int:member_id>/latest-report
+/api/user/delete-account/<int:user_id>
+/api/user/family-members
+/api/user/link-pds
+/api/user/monthly-usage/<int:user_id>
+/api/user/profile/<int:user_id>
+/api/user/register
+/api/user/select-dealer
+/api/user/upload-profile-picture/<int:user_id>
+/api/user/weekly-progress/<int:user_id>
+/dealer/<int:dealer_id>/beneficiaries
+/dealer/add-stock
+/dealer/beneficiary/<int:id>
+/dealer/change-password
+/dealer/confirm-delivery/<request_group_id>
+/dealer/confirm-distribution
+/dealer/dashboard-stats/<int:dealer_id>
+/dealer/distribution-history/<int:dealer_id>
+/dealer/forgot-password
+/dealer/forgot-password/reset
+/dealer/forgot-password/send-otp
+/dealer/forgot-password/verify-otp
+/dealer/generate-kit
+/dealer/household/<int:user_id>
+/dealer/kit-received-list/<int:dealer_id>
+/dealer/kit-received/<string:kit_unique_id>
+/dealer/login
+/dealer/profile/<int:dealer_id>
+/dealer/qr/<int:dealer_id>
+/dealer/register
+/dealer/register-household
+/dealer/request-stock
+/dealer/resend-email-otp
+/dealer/reset-password/<code>
+/dealer/send-registration-otp
+/dealer/update-profile/<int:dealer_id>
+/dealer/update-stock
+/dealer/verify-beneficiary
+/dealer/verify-email-otp
+/dealer/verify-qr
+/dealer/verify-registration-otp
+/dealer/view-stock/<int:dealer_id>
+/dealer_qr_codes/<path:filename>
+/debug-routes
+/static/<path:filename>
+/test-email
+/uploads/<path:filename>
+/uploads/<path:filename>
+/user/add-teeth-report
+/user/change-password
+/user/checkin
+/user/confirm-kit
+/user/confirm-kit-by-dealer-qr
+/user/forgot-password
+/user/forgot-password/reset
+/user/forgot-password/send-otp
+/user/forgot-password/verify-otp
+/user/link-identity
+/user/login
+/user/nearby-clinics
+/user/register
+/user/resend-email-otp
+/user/reset-password/<code>
+/user/send-registration-otp
+/user/teeth-ai
+/user/update-brush-count/<int:member_id>
+/user/update-profile/<int:user_id>
+/user/verify-email-otp
+/user/verify-registration-otp
+/user/view-clinics
+/user/view-teeth-reports/<int:user_id>
+
+FILE: tmp_db.txt
+∩╗┐Databases: ['digitalpds', 'information_schema', 'mysql', 'performance_schema', 'phpmyadmin', 'test']
+Tables in digitalpds: ['admins', 'appointments', 'brushing_checkins', 'clinics', 'dealer_locations', 'dealer_stock', 'dealers', 'family_members', 'kit_distributions', 'member_monthly_usage', 'stock_requests', 'teeth_reports', 'users']
+
+Columns in 'users' table:
+('id', 'int(11)', 'NO', 'PRI', None, 'auto_increment')
+('name', 'varchar(100)', 'NO', '', None, '')
+('email', 'varchar(120)', 'NO', 'UNI', None, '')
+('phone', 'varchar(20)', 'YES', '', None, '')
+('password_hash', 'varchar(255)', 'NO', '', None, '')
+('pds_card_no', 'varchar(50)', 'YES', '', None, '')
+('pds_linked_at', 'datetime', 'YES', '', None, '')
+('pds_verified', 'tinyint(1)', 'YES', '', '0', '')
+('reset_code', 'varchar(255)', 'YES', '', None, '')
+('reset_expiry', 'datetime', 'YES', '', None, '')
+('dealer_id', 'int(11)', 'YES', '', None, '')
+('location_id', 'int(11)', 'YES', 'MUL', None, '')
+('created_by_type', 'varchar(20)', 'YES', '', 'SELF', '')
+('dealer_assigned_at', 'datetime', 'YES', '', None, '')
+('dealer_assignment_locked', 'tinyint(1)', 'YES', '', '0', '')
+('pds_card_front', 'varchar(255)', 'YES', '', None, '')
+('pds_card_back', 'varchar(255)', 'YES', '', None, '')
+('address', 'text', 'YES', '', None, '')
+('age', 'int(11)', 'YES', '', None, '')
+('gender', 'varchar(20)', 'YES', '', None, '')
+('education', 'varchar(100)', 'YES', '', None, '')
+('employment', 'varchar(100)', 'YES', '', None, '')
+('profile_image', 'varchar(255)', 'YES', '', None, '')
+
+FILE: tmp_log.txt
+∩╗┐/admin/beneficiaries 
+HTTP/1.1" 500 -
+127.0.0.1 - - [03/Apr/2026 
+10:57:27] "GET 
+/admin/distributions 
+HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 
+10:57:29] "GET 
+/dealer/dashboard-stats/1 
+HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 
+10:57:31] "GET /dealer/benef
+iciaries?dealerId=1 
+HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 
+10:58:40] "POST /user/login 
+HTTP/1.1" 401 -
+C:\Users\APPANAGIRI\AppData\
+Local\Programs\Python\Python
+312\Lib\site-packages\jwt\ap
+i_jwt.py:153: 
+InsecureKeyLengthWarning: 
+The HMAC key is 16 bytes 
+long, which is below the 
+minimum recommended length 
+of 32 bytes for SHA256. See 
+RFC 7518 Section 3.2.
+  return self._jws.encode(
+127.0.0.1 - - [03/Apr/2026 
+10:58:49] "POST /user/login 
+HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 
+10:59:09] "GET 
+/user/view-clinics 
+HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 
+10:59:13] "GET 
+/user/view-clinics 
+HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 
+10:59:17] "GET /user/distrib
+utions?userId=1 HTTP/1.1" 
+404 -
+127.0.0.1 - - [03/Apr/2026 
+10:59:25] "GET /user/distrib
+utions?userId=1 HTTP/1.1" 
+404 -
+ * Detected change in 'C:\\U
+sers\\APPANAGIRI\\OneDrive\\
+Desktop\\digitalpds-web\\Dig
+italpds\\app.py', reloading
+Exception in thread 
+Thread-1 (serve_forever):
+Traceback (most recent call 
+last):
+  File "C:\Users\APPANAGIRI\
+AppData\Local\Programs\Pytho
+n\Python312\Lib\threading.py
+", line 1073, in 
+_bootstrap_inner
+    self.run()
+  File "C:\Users\APPANAGIRI\
+AppData\Local\Programs\Pytho
+n\Python312\Lib\threading.py
+", line 1010, in run
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 124-744-339
+ * Detected change in 'C:\\U
+sers\\APPANAGIRI\\OneDrive\\
+Desktop\\digitalpds-web\\Dig
+italpds\\app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 124-744-339
+127.0.0.1 - - [03/Apr/2026 
+11:04:19] "GET 
+/user/dashboard HTTP/1.1" 
+404 -
+C:\Users\APPANAGIRI\AppData\
+Local\Programs\Python\Python
+312\Lib\site-packages\jwt\ap
+i_jwt.py:153: 
+InsecureKeyLengthWarning: 
+The HMAC key is 16 bytes 
+long, which is below the 
+minimum recommended length 
+of 32 bytes for SHA256. See 
+RFC 7518 Section 3.2.
+  return self._jws.encode(
+127.0.0.1 - - [03/Apr/2026 
+11:04:59] "POST /user/login 
+HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 
+11:08:00] "POST /user/login 
+HTTP/1.1" 200 -
+127.0.0.1 - - [03/Apr/2026 
+11:08:59] "GET 
+/user/dashboard HTTP/1.1" 
+404 -
+
+FILE: tmp_routes_full.txt
+∩╗┐['/static/<path:filename>', '/uploads/<path:filename>', '/', '/test-email', '/dealer_qr_codes/<path:filename>', '/uploads/<path:filename>', '/admin/profile', '/admin/update-profile', '/admin/change-password', '/admin/dashboard-stats', '/admin/distributions', '/dealer/register', '/user/send-registration-otp', '/user/verify-registration-otp', '/dealer/send-registration-otp', '/dealer/verify-registration-otp', '/api/user/register', '/user/register', '/user/link-identity', '/user/verify-email-otp', '/dealer/verify-email-otp', '/user/resend-email-otp', '/dealer/resend-email-otp', '/api/user/select-dealer', '/admin/dealers', '/admin/dealers/<dealer_id>', '/api/dealers', '/admin/beneficiaries', '/api/admin/beneficiaries', '/dealer/register-household', '/admin/login', '/dealer/login', '/user/login', '/user/forgot-password/send-otp', '/user/forgot-password/verify-otp', '/user/forgot-password/reset', '/dealer/forgot-password/send-otp', '/dealer/forgot-password/verify-otp', '/dealer/forgot-password/reset', '/api/user/profile/<int:user_id>', '/api/user/upload-profile-picture/<int:user_id>', '/user/update-brush-count/<int:member_id>', '/user/checkin', '/api/user/weekly-progress/<int:user_id>', '/api/user/monthly-usage/<int:user_id>', '/dealer/profile/<int:dealer_id>', '/dealer/update-profile/<int:dealer_id>', '/dealer/change-password', '/user/change-password', '/user/update-profile/<int:user_id>', '/user/nearby-clinics', '/dealer/add-stock', '/dealer/view-stock/<int:dealer_id>', '/dealer/update-stock', '/dealer/generate-kit', '/dealer/request-stock', '/admin/stock-requests', '/admin/stock-requests/<int:request_id>', '/admin/approve-stock/<int:request_id>', '/admin/dispatch-stock/<int:request_id>', '/dealer/confirm-delivery/<request_group_id>', '/admin/reject-stock/<int:request_id>', '/user/confirm-kit', '/user/confirm-kit-by-dealer-qr', '/dealer/confirm-distribution', '/dealer/verify-beneficiary', '/dealer/household/<int:user_id>', '/dealer/distribution-history/<int:dealer_id>', '/dealer/qr/<int:dealer_id>', '/dealer/kit-received/<string:kit_unique_id>', '/dealer/kit-received-list/<int:dealer_id>', '/dealer/verify-qr', '/admin/generate-missing-dealer-qrs', '/admin/sync-existing-dealer-locations', '/api/user/link-pds', '/api/family-members', '/api/family-members/<int:user_id>', '/api/user/family-members', '/api/family-members/<int:member_id>', '/api/family-members/<int:member_id>', '/admin/add-clinic', '/user/view-clinics', '/admin/delete-clinic/<int:clinic_id>', '/user/add-teeth-report', '/user/view-teeth-reports/<int:user_id>', '/api/member/<int:member_id>/latest-report', '/user/teeth-ai', '/admin/get-dealers', '/admin/dashboard-stats', '/dealer/dashboard-stats/<int:dealer_id>', '/admin/beneficiary/<int:user_id>', '/admin/beneficiaries/<int:user_id>', '/admin/update-beneficiary/<int:user_id>', '/admin/delete-beneficiary/<int:user_id>', '/api/user/delete-account/<int:user_id>', '/dealer/<int:dealer_id>/beneficiaries', '/dealer/beneficiary/<int:id>', '/admin/regenerate-all-dealer-qrs', '/admin/delete-dealer/<int:dealer_id>', '/debug-routes', '/user/forgot-password', '/dealer/forgot-password', '/user/reset-password/<code>', '/dealer/reset-password/<code>']
+

@@ -1,0 +1,187 @@
+﻿DEALERS STATUS: 200
+DEALERS BODY:
+[
+  {
+    "activeStatus": "Active",
+    "address": "N/A",
+    "city": "N/A",
+    "companyName": "charupalli ",
+    "contactPerson": "Shaik",
+    "contactPhone": "9347756072",
+    "email": "shaheeds894@gmail.com",
+    "handle": "shaik",
+    "id": 3,
+    "isEnabled": true,
+    "isOnline": true,
+    "location": "N/A",
+    "name": "Shaik",
+    "phone": "9347756072",
+    "pincode": "N/A",
+    "state": "N/A"
+  },
+  {
+    "activeStatus": "Active",
+    "address": "N/A",
+    "city": "N/A",
+    "companyName": "kanchipuram",
+    "contactPerson": "sasi",
+    "contactPhone": "9059892833",
+    "email": "sasid@gmail.com",
+    "handle": "sasi",
+    "id": 4,
+    "isEnabled": true,
+    "isOnline": true,
+    "location": "N/A",
+    "name": "sasi",
+    "phone": "9059892833",
+    "pincode": "N/A",
+    "state": "N/A"
+  },
+  {
+    "activeStatus": "Active",
+    "address": "GRT jwellery, Poonamallee ",
+    "city": "chennai ",
+    "companyName": "Sai-pds shop",
+    "contactPerson": "Sai",
+    "contactPhone": "9059892833",
+    "email": "appanagirisai7569@gmail.com",
+    "handle": "appanagirisai7569@gmail.com",
+    "id": 9,
+    "isEnabled": true,
+    "isOnline": true,
+    "location": "GRT jwellery, Poonamallee ",
+    "name": "Sai",
+    "phone": "9059892833",
+    "pincode": "N/A",
+    "state": "tamil nadu"
+  },
+  {
+    "activeStatus": "Active",
+    "address": "Avadi",
+    "city": "chennai",
+    "companyName": "PDS shop",
+    "contactPerson": "Krishna",
+    "contactPhone": "9059892833",
+    "email": "krishna2002456@gmail.com",
+    "handle": "krishna2002456@gmail.com",
+    "id": 10,
+    "isEnabled": true,
+    "isOnline": true,
+    "location": "Avadi",
+    "name": "Krishna",
+    "phone": "9059892833",
+    "pincode": "N/A",
+    "state": "Tamil nadu"
+  },
+  {
+    "activeStatus": "Active",
+    "address": "T Nagar",
+    "city": "Chennai",
+    "companyName": "PDS- SHOP",
+    "contactPerson": "SAI",
+    "contactPhone": "9056892833",
+    "email": "saiappanagiri7@gmail.com",
+    "handle": "saiappanagiri7@g
+
+BENEFICIARIES:
+STATUS: 200
+[
+  {
+    "dealer_name": "N/A",
+    "email": "shiva@gmail.com",
+    "id": 5,
+    "location_name": "N/A",
+    "name": "shivooo",
+    "pds_card_no": "PDS-523135",
+    "pds_linked_at": "2026-03-05",
+    "pds_verified": true,
+    "phone": "9865321470"
+  },
+  {
+    "dealer_name": "N/A",
+    "email": "sasi@gmail.com",
+    "id": 8,
+    "location_name": "N/A",
+    "name": "sasi",
+    "pds_card_no": null,
+    "pds_linked_at": null,
+    "pds_verified": false,
+    "phone": "987645312"
+  },
+  {
+    "dealer_name": "N/A",
+    "email": "sai4gmail. com",
+    "id": 9,
+    "location_name": "N/A",
+    "name": "sai4",
+    "pds_card_no": null,
+    "pds_linked_at": null,
+    "pds_verified": false,
+    "phone": "9058674321"
+  },
+  {
+    "dealer_name": "N/A",
+    "email": "sanjay@gmail.com",
+    "id": 10,
+    "location_name": "N/A",
+    "name": "sanjay ",
+    "pds_card_no": "PDS-523147",
+    "pds_linked_at": "2026-03-05",
+    "pds_verified": true,
+    "phone": "9865432170"
+  },
+  {
+    "dealer_name": "N/A",
+    "email": "mave@gamil.com",
+    "id": 11,
+    "location_name": "N/A",
+    "name": "Maveen ",
+    "pds_card_no": "PDS-523145",
+    "pds_linked_at": "2026-03-05",
+    "pds_verified": true,
+    "phone": "9089754631"
+  },
+  {
+    "dealer_name": "N/A",
+    "email": "sasi@gamil.com",
+    "id": 12,
+    "location_name": "N/A",
+    "name": "sasi",
+    "pds_card_no": null,
+    "pds_linked_at": null,
+    "pds_verified": false,
+    "phone": "9865321470"
+  },
+  {
+    "dealer_name": "N/A",
+    "email": "rohith@gmail.com",
+    "id": 13,
+    "location_name": "N/A",
+    "name": "rohith",
+    "pds_card_no": null,
+    "pds_linked_at": null,
+    "pds_verified": false,
+    "phone": "9867543210"
+  },
+  {
+    "dealer_name": "N/A",
+    "email": "appangiri@gamil.com",
+    "id": 14,
+    "location_name": "N/A",
+    "name": "Appanagiri ",
+    "pds_card_no": null,
+    "pds_linked_at": null,
+    "pds_verified": false,
+    "phone": "9638527412"
+  },
+  {
+    "dealer_name": "N/A",
+    "email": "chandu@gamil.com",
+  
+
+TEST confirm-kit-by-dealer-qr:
+STATUS: 404
+BODY: {
+  "error": "Invalid dealer QR"
+}
+
